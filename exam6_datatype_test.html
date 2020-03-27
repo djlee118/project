@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //아래와 같이 문자열의 길이를 알 수 있음.
+        var val = "magic";
+        document.write(val + "<br>");
+        document.write(val.length + "<br>");  // 5가 출력됨.
+        document.write(typeof(val)+ "<br><hr>");
+
+        //기타 메소드을 알아보자
+        var val = "Hello T.hub";
+        document.write(val+"<br>")
+        document.write(val.charAt(0) +"<br>");          // "H" 의 첫문자를 뜻함.
+        document.write(val.replace("T","t")+"<br>");    // "Hello t.hub" : T => t 로변경함.
+        document.write(val.toUpperCase()+"<br>");       // "HELLO T.HUB" : 대문자로 변경함.
+        document.write(val.toLowerCase()+"<br><hr>");    // "hello t.hub" : 소문자로 변경함.
+
+        // 아래와 같이 t.hub 에 대한 객체의 속성을 지정할 수 있음. 그리고 객체의 메소드(동작)을 추가하면 완전한 객체가 됨.
+        var tHub = { nickname: "magic", company: "sk communications", rank: 1 };
+
+        // 아래는 객체 속성을 사용, 속성을 사용할때는 도트(.) 연산자를 이용함.
+        document.write(tHub.nickname + "<br>");
+        document.write(tHub.company  + "<br>");
+        document.write(tHub.rank     + "<br>");
+        document.write(typeof(tHub)+ "<br><hr>");
+    </script>
+</body>
+</html>
