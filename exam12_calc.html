@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculator(oper) {
+            var i = document.getElementById("i").value;
+            var j = document.getElementById("j").value;
+            var sum = 0;
+
+            if(oper == "+") {
+                sum = parseInt(i) + parseInt(j);
+            } else if(oper == "-") {
+                sum = parseInt(i) - parseInt(j);
+            } else if(oper == "*") {
+                sum = parseInt(i) * parseInt(j);
+            } else if(oper == "/") {
+                sum = parseInt(i) / parseInt(j);
+            }
+
+            document.getElementById("sum").value = sum;            
+        }
+    </script>
+</head>
+<body>
+    <h1>계산기</h1>
+    <form name="calc" action="..." method="POST">
+        i: <input id="i" /><br />
+        j: <input id="j" /><br />
+        sum: <input id="sum" /><br />
+        <input type="button" value="+" onclick="calculator('+');" />
+        <input type="button" value="-" onclick="calculator('-');" />
+        <input type="button" value="*" onclick="calculator('*');" />
+        <input type="button" value="/" onclick="calculator('/');" />
+    </form>
+</body>
+</html>
