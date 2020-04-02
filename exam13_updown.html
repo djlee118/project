@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UP & DOWN</title>
+    <script>
+        var num  = 18;
+        var guessCnt = 0;
+
+        function guess_func() {
+            var res = "";
+
+            var val = parseInt(document.getElementById("game").value);
+            guessCnt++;
+
+            if(val == num) {
+                res = "success";
+            } else if(val < num) {
+                res = "down";
+            } else {
+                res = "up";
+            }
+
+            document.getElementById("res").value = res;
+            document.getElementById("guess_cnt").value = guessCnt;
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>UP & DOWN Game, range num(1-30)</h1>
+
+    <form>
+        input: 
+        <input type="text" id="game" size="10">
+        <input type="button" value="confirm" onclick="guess_func();">
+        guess count:
+        <input type="text" id="guess_cnt" size="10">
+        hint:
+        <input type="text" id="res" size="10">
+    </form>
+</body>
+</html>
