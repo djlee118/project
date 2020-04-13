@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Sample code</title>
+</head>
+<body>
+    <script>
+        var thub_master = { nickname: "magic", company: "skcomms", subject:"javascript"};
+        var sum_text = "";
+
+        for(var i in thub_master) {
+            sum_text += thub_master[i] + " ";
+        }
+        document.write(sum_text + "<br>");        
+
+        var text = "thub_master";
+        for(var j=0; j < 20; j++ ){ 
+            if( j==2 ) continue;         
+            if( j==5 ) break;
+    
+            document.write(text + j + "<br>");        
+        }
+        
+        var k=0;
+    
+        do {
+            document.write( k +"<br>");
+            k++;
+        } while ( k < 5 );
+    </script>
+</body>
+</html>
